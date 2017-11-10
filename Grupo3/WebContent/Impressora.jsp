@@ -28,8 +28,8 @@
 			<input type="date" id="Garantia" name="Garantia" value="${paramGarantia}">
 		</div>
 		<div>
-			<label for="Dt_Compra">Data da Compra: </label>
-			<input type="date" id="Dt_compra" name="Dt_Compra" value="${paramDt_Compra}"><br><br>
+			<label for="dt_Compra">Data da Compra: </label>
+			<input type="date" id="dt_Compra" name="dt_Compra" value="${paramdt_Compra}"><br><br>
 		</div>
 		<div>
 			<input type="submit" value="Salvar">

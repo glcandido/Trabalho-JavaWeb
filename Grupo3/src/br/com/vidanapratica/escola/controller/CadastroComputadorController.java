@@ -24,13 +24,13 @@ public class CadastroComputadorController extends HttpServlet {
        
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		try {
-			// Guardando os valores solicitados em um vari√°veis
+			// Guardando os valores solicitados em um vari·veis
 			String paramId = request.getParameter("id");
 			String paramMarca = request.getParameter("Marca");
 			String paramModelo = request.getParameter("Modelo");
 			String paramGarantia = request.getParameter("Garantia");
 			
-			// Gravando os valores obtidos na requisi√ß√£o.
+			// Gravando os valores obtidos na requisiÁ„o.
 			request.setAttribute("paramId", paramId);
 			request.setAttribute("paramMarca", paramMarca);
 			request.setAttribute("paramModelo", paramModelo);
@@ -39,7 +39,7 @@ public class CadastroComputadorController extends HttpServlet {
 			Long id = null;
 			Date garantia = null;
 			
-			// Verifica√ß√£o e valida√ß√£o dos dados informados
+			// VerificaÁ„o e validaÁ„o dos dados informados
 			
 			if(paramId != null && !paramId.trim().equals("") && !paramId.equals("null")){
 				id = Long.valueOf(paramId);
@@ -48,30 +48,30 @@ public class CadastroComputadorController extends HttpServlet {
 			StringBuilder textoDaMensagem = new StringBuilder();
 			
 			if(paramMarca != null && !paramMarca.trim().equals("") && !paramMarca.equals("null")) {
-				textoDaMensagem.append("A marca do computador n√£o foi informada.").append("<br />");
+				textoDaMensagem.append("A marca do computador n„o foi informada.").append("<br />");
 			}
 			
 			if(paramModelo !=null && !paramModelo.trim().equals("") && !paramModelo.equals("null")) {
-				textoDaMensagem.append("O modelo do computador n√£o foi informado.").append("<br/>");
+				textoDaMensagem.append("O modelo do computador n„o foi informado.").append("<br/>");
 			}
 			
 			if(paramGarantia !=null && !paramGarantia.trim().equals("") && !paramGarantia.equals("null")) {
-				textoDaMensagem.append("Informe at√© quando o produto tem garantia.").append("<br/>");
+				textoDaMensagem.append("Informe atÈ quando o produto tem garantia.").append("<br/>");
 			} else {
 				DateFormat format = new SimpleDateFormat("yyyy-MM-dd");
 				format.setLenient(false);
 				try {
 					garantia = format.parse(paramGarantia);
 				} catch (ParseException e) {
-					textoDaMensagem.append("Data com formato inv√°lido.").append("<br />");
+					textoDaMensagem.append("Data com formato inv·lido.").append("<br />");
 				}
 			}
 			
-			Mensagem mensagem = new Mensagem(false,"Opera√ß√£o efetuada com sucesso.");
+			Mensagem mensagem = new Mensagem(false,"OperaÁ„o efetuada com sucesso.");
 			request.setAttribute("mensagem", mensagem);
 			request.getRequestDispatcher("Computador.jsp").forward(request, response);
 			
-			// Tratamento de exce√ß√£o
+			// Tratamento de exceÁ„o
 		} catch (Exception e) {
 			e.printStackTrace();
 			Mensagem mensagem = new Mensagem(true, "Problemas ao salvar o cliente.");

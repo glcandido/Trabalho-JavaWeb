@@ -24,8 +24,8 @@
 			<input type="text" id="CPF" name="CPF" value="${paramCPF}">
 		</div>
 		<div>
-			<label for="Dt_Nasc">Data de Nascimento: &nbsp;</label>
-			<input type="date" id="Dt_Nasc" name="Dt_Nasc" value="${paramDt_Nasc}"><br><br>
+			<label for="dt_Nasc">Data de Nascimento: &nbsp;</label>
+			<input type="date" id="dt_Nasc" name="dt_Nasc" value="${paramdt_Nasc}"><br><br>
 		</div>
 		<div>
 			<input type="submit" value="Salvar">

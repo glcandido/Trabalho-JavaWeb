@@ -25,7 +25,7 @@
 		</div>
 		<div>
 			<label for="Garantia">Garantia: &nbsp;</label>
-			<input type="date" id="Garantia" name="Garantia" value="${paramGarantia}"><br><br>
+			<input type="date" id="garantia" name="garantia" value="${paramGarantia}"><br><br>
 		</div>
 		<div>
 			<input type="submit" value="Salvar">
